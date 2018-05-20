@@ -14,14 +14,14 @@ namespace Ex04.Menus.Delegates
         {
         }
 
-        public override void SpecificChoise()
+        public override void SpecificChoice()
         {
             Console.Clear();
             manegeUserOptions();
         }
         public override void BackToLastMenu()
         {
-            this.GoToParentItem.SpecificChoise(); //Back to The Last Page
+            this.GoToParentItem.SpecificChoice(); //Back to The Last Page
         }
         public List<MenuItem> InsideOptionsList
         {
@@ -36,10 +36,10 @@ namespace Ex04.Menus.Delegates
         public void manegeUserOptions()
         {
             printInternalMenuToConsole();
-            int userChoise = verifyUserInput();
-            if (userChoise != 0)
+            int userChoice = verifyUserInput();
+            if (userChoice != 0)
             {
-                r_InsideOptionsList[userChoise - 1].SpecificChoise();
+                r_InsideOptionsList[userChoice - 1].SpecificChoice();
             }
             else
             {
@@ -51,19 +51,19 @@ namespace Ex04.Menus.Delegates
 
         private int verifyUserInput()
         {
-            int userChoise = GetAnInputFromUser();
-            while (!(userChoise >= 0 && userChoise <= r_InsideOptionsList.Capacity))
+            int userChoice = GetAnInputFromUser();
+            while (!(userChoice >= 0 && userChoice <= r_InsideOptionsList.Capacity))
             {
                 Console.SetCursorPosition(0, 8);
                 Console.Beep();
                 Console.Write(Constants.k_WorngInputMessage);
-                userChoise = GetAnInputFromUser();
+                userChoice = GetAnInputFromUser();
                 Console.SetCursorPosition(0, 8);
                 Console.Write("                                                     ");
 
             }
 
-            return userChoise;
+            return userChoice;
 
         }
     }

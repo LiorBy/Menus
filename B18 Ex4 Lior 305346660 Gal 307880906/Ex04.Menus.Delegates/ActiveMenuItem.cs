@@ -6,7 +6,7 @@ namespace Ex04.Menus.Delegates
 {
     public delegate void ChoiceNotifyDelegate();
 
-    class ActiveMenuItem : MenuItem
+    public class ActiveMenuItem : MenuItem
     {
         public event ChoiceNotifyDelegate Choice;
 
@@ -15,26 +15,26 @@ namespace Ex04.Menus.Delegates
         {
         }
 
-        public override void SpecificChoise()
+        public override void SpecificChoice()
         {
             activeTheMethod();
         }
 
         public override void BackToLastMenu()
         {
-            this.GoToParentItem.SpecificChoise();
+            this.GoToParentItem.SpecificChoice();
         }
 
         private void activeTheMethod()
         {
             
             Console.Clear();
-            onChoise();
+            onChoice();
             BackToLastMenu();
 
         }
 
-        private void onChoise()
+        private void onChoice()
         {
             ////Lets tell the parent about my chise in the menu and activate a Function
             if(Choice != null) 

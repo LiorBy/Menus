@@ -34,6 +34,7 @@
     <Compile Include="CapitalLettersCounter.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="DateDisplayer.cs" />
+    <Compile Include="DelegatesDemonstration.cs" />
     <Compile Include="InterfaceDemonstration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ShowVersion.cs" />
