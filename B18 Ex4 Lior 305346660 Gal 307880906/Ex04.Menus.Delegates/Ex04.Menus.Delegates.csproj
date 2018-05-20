@@ -34,7 +34,12 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ActiveMenuItem.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="InternalMenu.cs" />
     <Compile Include="MainMenu.cs" />
+    <Compile Include="MenuItem.cs" />
+    <Compile Include="PrintMenuWindow.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
