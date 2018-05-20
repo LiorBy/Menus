@@ -15,17 +15,27 @@ namespace Ex04.Menus.Interfaces
         }
         public override void SpecificChoice()
         {
-            ActiveTheMethod();
+            activeTheMethod();
         }
 
         public override void BackToLastMenu()
         {
-            
+            this.GoToParentItem.SpecificChoice();
         }
-        private void ActiveTheMethod()
+
+        private void activeTheMethod()
         {
             r_ChosenOption.ExecutActionMethod();
+            int userInputAsInt = GetAnInputFromUser();
+            while(userInputAsInt != 0 )
+            {
+                Console.Beep();
+                Console.WriteLine(Constants.k_WorngInputMessage);
+                userInputAsInt = GetAnInputFromUser();
+            }
 
+            Console.Clear();
+            BackToLastMenu();
 
         }
     }

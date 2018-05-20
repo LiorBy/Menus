@@ -10,6 +10,12 @@ namespace Ex04.Menus.Interfaces
         {
         }
 
+        public override void BackToLastMenu() //Finish run Interface Menu
+        {
+            Console.Clear();
+        }
+
+
 
     }
 }

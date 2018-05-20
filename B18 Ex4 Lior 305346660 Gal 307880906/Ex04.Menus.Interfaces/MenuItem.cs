@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Ex04.Menus.Interfaces
 {
-    public abstract class MenuItem
+    public class MenuItem
     {
         private readonly string r_NameItem;
         private MenuItem m_ParentItem;
@@ -15,28 +15,31 @@ namespace Ex04.Menus.Interfaces
             m_ParentItem = i_ParentItem;
         }
 
-        public abstract void  SpecificChoice(); //// abstract methods when we click on this menu item
-        public abstract void BackToLastMenu();
-
+        public virtual void SpecificChoice() { } 
+        public virtual void BackToLastMenu() { }
 
         public string Name
         {
             get { return r_NameItem; }
         }
 
+        public MenuItem GoToParentItem
+        {
+            get { return m_ParentItem; }
+        }
 
+        public MenuItem SetParentItem
+        {
+            set { m_ParentItem = value; }
+        }
 
-        //public MenuItem GoToParentItem
-        //{
-        //    get { return m_ParentItem; }
-        //}
-
-        //public MenuItem SetParentItem
-        //{
-        //    set { m_ParentItem = value; }
-        //}
-
-
+        public int GetAnInputFromUser()
+        {
+            char userInput = Console.ReadKey().KeyChar;
+            int userInputAsInt;
+            int.TryParse(char.ToString(userInput), out userInputAsInt);
+            return userInputAsInt;
+        }
 
     }
 }
