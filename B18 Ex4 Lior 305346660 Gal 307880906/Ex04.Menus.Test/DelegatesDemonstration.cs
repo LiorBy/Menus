@@ -6,11 +6,12 @@ namespace Ex04.Menus.Test
 {
     public class DelegatesDemonstration
     {
+        private MainMenu m_MainMenu = new MainMenu(Constants.k_DelegatesHeadLine);
+
         public void StartDemonstration()
         {
-            MainMenu DelegatesMainMenu = new MainMenu(Constants.k_DelegatesHeadLine);
-            createInterfaceMenu(DelegatesMainMenu);
-            DelegatesMainMenu.SpecificChoice();
+            createInterfaceMenu(m_MainMenu);
+            m_MainMenu.Show();
         }
 
         private void createInterfaceMenu(MainMenu i_MainMenu)
@@ -22,17 +23,17 @@ namespace Ex04.Menus.Test
             i_MainMenu.InsideOptionsList.Add(versionAndCapitalMenu);
 
             ActiveMenuItem timeApp = new ActiveMenuItem(Constants.k_ShowTimeTitle, dateAndTimeMenu);
-            timeApp.Choice += this.showCurrentTime;
+            timeApp.Choice += this.showCurrentTime;////add pointer to the fuction to the event
             ActiveMenuItem dateApp = new ActiveMenuItem(Constants.k_ShowDateTitle, dateAndTimeMenu);
-            dateApp.Choice += this.showTodayDate;
+            dateApp.Choice += this.showTodayDate;////add pointer to the fuction to the event
 
             dateAndTimeMenu.InsideOptionsList.Add(timeApp);
             dateAndTimeMenu.InsideOptionsList.Add(dateApp);
 
             ActiveMenuItem countCapitals = new ActiveMenuItem(Constants.k_CountCapitalsTitle, versionAndCapitalMenu);
-            countCapitals.Choice += this.countCapitalLetterInSentence;
+            countCapitals.Choice += this.countCapitalLetterInSentence;////add pointer to the fuction to the event
             ActiveMenuItem version = new ActiveMenuItem(Constants.k_ShowVersion, versionAndCapitalMenu);
-            version.Choice += this.showVersion;
+            version.Choice += this.showVersion;////add pointer to the fuction to the event
 
             versionAndCapitalMenu.InsideOptionsList.Add(countCapitals);
             versionAndCapitalMenu.InsideOptionsList.Add(version);

@@ -7,11 +7,12 @@ namespace Ex04.Menus.Test
 {
     public class InterfaceDemonstration
     {
+        private MainMenu m_MainMenu = new MainMenu(Constants.k_InterfaceHeadLine);
+
         public void StartDemonstration()
         {
-            MainMenu interfaceMainMenu = new MainMenu(Constants.k_InterfaceHeadLine);
-            createInterfaceMenu(interfaceMainMenu);
-            interfaceMainMenu.SpecificChoice();
+            createInterfaceMenu(m_MainMenu);
+            m_MainMenu.Show();
         }
 
         private void createInterfaceMenu(MainMenu i_MainMenu)

@@ -17,7 +17,7 @@ namespace Ex04.Menus.Interfaces
         public override void SpecificChoice()
         {
             Console.Clear();
-            ManegeUserOptions();
+            Show();
         }
 
         public override void BackToLastMenu()
@@ -35,7 +35,7 @@ namespace Ex04.Menus.Interfaces
             r_DisplayMenuWindowObj.DisplayCurrentMenuWindow(Name, r_InsideOptionsList);
         }
 
-        public void ManegeUserOptions()
+        public void Show()
         {
             printInternalMenuToConsole();
             int userChoice = verifyUserInput();
