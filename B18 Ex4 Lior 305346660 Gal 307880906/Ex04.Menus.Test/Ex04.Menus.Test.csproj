@@ -32,7 +32,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CapitalLettersCounter.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="DateDisplayer.cs" />
+    <Compile Include="InterfaceDemonstration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ShowVersion.cs" />
     <Compile Include="TimeDisplayer.cs" />
