@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Ex04.Menus.Interfaces
 {
-    interface IAbilityToOperate 
+    public interface IAbilityToOperate 
     {
         void ExecutActionMethod();
     }
