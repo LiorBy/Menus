@@ -5,16 +5,14 @@ using Ex04.Menus.Interfaces;
 
 namespace Ex04.Menus.Test
 {
-    class InterfaceDemonstration
+    public class InterfaceDemonstration
     {
         public void StartDemonstration()
         {
             MainMenu interfaceMainMenu = new MainMenu(Constants.k_InterfaceHeadLine);
             createInterfaceMenu(interfaceMainMenu);
             interfaceMainMenu.SpecificChoice();
-
         }
-
 
         private void createInterfaceMenu(MainMenu i_MainMenu)
         {
@@ -36,7 +34,5 @@ namespace Ex04.Menus.Test
             versionAndCapitalMenu.InsideOptionsList.Add(countCapitals);
             versionAndCapitalMenu.InsideOptionsList.Add(version);
         }
-
-
     }
 }

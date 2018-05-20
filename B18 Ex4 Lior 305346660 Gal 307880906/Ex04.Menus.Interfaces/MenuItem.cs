@@ -15,8 +15,13 @@ namespace Ex04.Menus.Interfaces
             m_ParentItem = i_ParentItem;
         }
 
-        public virtual void SpecificChoice() { } 
-        public virtual void BackToLastMenu() { }
+        public virtual void SpecificChoice()
+        {
+        } 
+
+        public virtual void BackToLastMenu()
+        {
+        }
 
         public string Name
         {
@@ -37,13 +42,12 @@ namespace Ex04.Menus.Interfaces
         {
             char userInput = Console.ReadKey().KeyChar;
             int userInputAsInt;
-            if( !int.TryParse(char.ToString(userInput), out userInputAsInt))
+            if(!int.TryParse(char.ToString(userInput), out userInputAsInt))
             {
                 userInputAsInt = -1;
             }
 
             return userInputAsInt;
         }
-
     }
 }

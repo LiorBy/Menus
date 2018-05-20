@@ -5,7 +5,7 @@ using Ex04.Menus.Interfaces;
 
 namespace Ex04.Menus.Test
 {
-    class CapitalLettersCounter : IAbilityToOperate
+    public class CapitalLettersCounter : IAbilityToOperate
     {
         public void ExecutActionMethod()
         {

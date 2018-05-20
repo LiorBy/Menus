@@ -28,6 +28,7 @@ namespace Ex04.Menus.Test
                     endDisplay = Console.ReadKey().KeyChar;
                     endLoopDisplay = true;
                 }
+
                 Console.SetCursorPosition(Constants.k_DisplayTimeColumn, Constants.k_DisplayTimeLine + 1);
                 Console.WriteLine(DateTime.Now.ToString("HH:mm:ss"));
             }

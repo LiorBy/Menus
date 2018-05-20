@@ -6,9 +6,9 @@ namespace Ex04.Menus.Interfaces
 {
     public class InternalMenu : MenuItem
     {
-
         private readonly List<MenuItem> r_InsideOptionsList = new List<MenuItem>();
         private readonly PrintMenuWindow r_DisplayMenuWindowObj = new PrintMenuWindow();
+
         public InternalMenu(string i_InternatMenuName, MenuItem i_InternalMenuParent)
             : base(i_InternatMenuName, i_InternalMenuParent)
         {
@@ -17,12 +17,14 @@ namespace Ex04.Menus.Interfaces
         public override void SpecificChoice()
         {
             Console.Clear();
-            manegeUserOptions();
+            ManegeUserOptions();
         }
+
         public override void BackToLastMenu()
-        {
-            this.GoToParentItem.SpecificChoice(); //Back to The Last Page
+        { //// Back to The Last Page
+            GoToParentItem.SpecificChoice(); 
         }
+
         public List<MenuItem> InsideOptionsList
         {
             get { return r_InsideOptionsList; }
@@ -33,7 +35,7 @@ namespace Ex04.Menus.Interfaces
             r_DisplayMenuWindowObj.DisplayCurrentMenuWindow(Name, r_InsideOptionsList);
         }
 
-        public void manegeUserOptions()
+        public void ManegeUserOptions()
         {
             printInternalMenuToConsole();
             int userChoise = verifyUserInput();
@@ -44,9 +46,8 @@ namespace Ex04.Menus.Interfaces
             else 
             {
                 Console.Clear();
-                this.BackToLastMenu();
-            }
-          
+                BackToLastMenu();
+            }        
         }
 
         private int verifyUserInput()
@@ -59,14 +60,10 @@ namespace Ex04.Menus.Interfaces
                 Console.Write(Constants.k_WorngInputMessage);
                 userChoise = GetAnInputFromUser();
                 Console.SetCursorPosition(0, 8);
-                Console.Write("                                                     ");
-                
+                Console.Write("                                                     ");             
             }
 
             return userChoise;
-
         }
-        ///private void printInternalMenu
-
     }
 }

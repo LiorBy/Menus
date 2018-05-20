@@ -4,9 +4,8 @@ using System.Text;
 
 namespace Ex04.Menus.Interfaces
 {
-    class PrintMenuWindow
-    {
-        
+    public class PrintMenuWindow
+    {       
         public void DisplayCurrentMenuWindow(string i_HeadLineOfTheWindow, List<MenuItem> i_InsideWindowOptionsList)
         {
             Console.WriteLine(Constants.k_OneLine);
@@ -15,7 +14,7 @@ namespace Ex04.Menus.Interfaces
             foreach (MenuItem item in i_InsideWindowOptionsList)
             {
                 Console.Write("{0}{1}. {2} ", Constants.k_WindowBoarder, counterLine - 2, item.Name);
-                Console.SetCursorPosition(Constants.k_RightWindowEdgeNumber,counterLine);
+                Console.SetCursorPosition(Constants.k_RightWindowEdgeNumber, counterLine);
                 Console.WriteLine(Constants.k_WindowBoarder);
                 counterLine++;
             }
@@ -24,7 +23,7 @@ namespace Ex04.Menus.Interfaces
             Console.SetCursorPosition(Constants.k_RightWindowEdgeNumber, counterLine);
             Console.WriteLine(Constants.k_WindowBoarder);
             counterLine++;
-            Console.Write("{0}{1} ({2} - {3}) ", Constants.k_WindowBoarder,Constants.k_ChoseAnOptionMessage, Constants.k_FirstOptionNumber , counterLine - 4) ;
+            Console.Write("{0}{1} ({2} - {3}) ", Constants.k_WindowBoarder, Constants.k_ChoseAnOptionMessage, Constants.k_FirstOptionNumber, counterLine - 4);
             Console.SetCursorPosition(Constants.k_RightWindowEdgeNumber, counterLine);
             Console.WriteLine(Constants.k_WindowBoarder);
             Console.WriteLine(Constants.k_OneLine);
@@ -43,15 +42,15 @@ namespace Ex04.Menus.Interfaces
             printBackLineForHeadLine(i_HeadLineName.Length);
             Console.SetCursorPosition(Constants.k_RightWindowEdgeNumber, counterLine + 2);
             Console.WriteLine(Constants.k_WindowBoarder);
-
         }
 
         private void printBackLineForHeadLine(int i_NumberOfCharsInTheHeadLine)
         {
-            for(int i = 0; i < i_NumberOfCharsInTheHeadLine;i ++)
+            for(int i = 0; i < i_NumberOfCharsInTheHeadLine; i++)
             {
                 Console.Write(Constants.k_BackLineChar);
             }
+
             Console.WriteLine();
         }
     }
