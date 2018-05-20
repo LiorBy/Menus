@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Ex04.Menus.Delegates;
+
 namespace Ex04.Menus.Test
 {
     public class DelegatesDemonstration
@@ -36,10 +37,7 @@ namespace Ex04.Menus.Test
 
             versionAndCapitalMenu.InsideOptionsList.Add(countCapitals);
             versionAndCapitalMenu.InsideOptionsList.Add(version);
-
-            
         }
-
 
         ////------Implementation of all the methods--------
         private void countCapitalLetterInSentence()
@@ -109,11 +107,5 @@ namespace Ex04.Menus.Test
 
             Console.Clear();
         }
-
-        ////----------------------------------------------------------------------------------------------------
-
-
-
-
     }
 }

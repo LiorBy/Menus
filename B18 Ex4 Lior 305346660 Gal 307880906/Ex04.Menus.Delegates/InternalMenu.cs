@@ -6,9 +6,9 @@ namespace Ex04.Menus.Delegates
 {
     public class InternalMenu : MenuItem
     {
-
         private readonly List<MenuItem> r_InsideOptionsList = new List<MenuItem>();
         private readonly PrintMenuWindow r_DisplayMenuWindowObj = new PrintMenuWindow();
+
         public InternalMenu(string i_InternatMenuName, MenuItem i_InternalMenuParent)
             : base(i_InternatMenuName, i_InternalMenuParent)
         {
@@ -19,10 +19,12 @@ namespace Ex04.Menus.Delegates
             Console.Clear();
             manegeUserOptions();
         }
+
         public override void BackToLastMenu()
         {
-            this.GoToParentItem.SpecificChoice(); //Back to The Last Page
+            GoToParentItem.SpecificChoice(); ////Back to The Last Page
         }
+
         public List<MenuItem> InsideOptionsList
         {
             get { return r_InsideOptionsList; }
@@ -44,9 +46,8 @@ namespace Ex04.Menus.Delegates
             else
             {
                 Console.Clear();
-                this.BackToLastMenu();
+                BackToLastMenu();
             }
-
         }
 
         private int verifyUserInput()
@@ -60,11 +61,9 @@ namespace Ex04.Menus.Delegates
                 userChoice = GetAnInputFromUser();
                 Console.SetCursorPosition(0, 8);
                 Console.Write("                                                     ");
-
             }
 
             return userChoice;
-
         }
     }
 }
