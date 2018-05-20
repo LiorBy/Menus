@@ -13,11 +13,15 @@ namespace Ex04.Menus.Interfaces
         {
             r_ChosenOption = i_ChosenOption;
         }
-        public override void X()
+        public override void SpecificChoice()
         {
             ActiveTheMethod();
         }
 
+        public override void BackToLastMenu()
+        {
+            
+        }
         private void ActiveTheMethod()
         {
             r_ChosenOption.ExecutActionMethod();

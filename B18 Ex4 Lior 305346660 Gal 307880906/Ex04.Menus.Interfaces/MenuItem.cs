@@ -15,12 +15,16 @@ namespace Ex04.Menus.Interfaces
             m_ParentItem = i_ParentItem;
         }
 
-        public abstract void  X(); //// abstract methods when we click on this menu item
+        public abstract void  SpecificChoice(); //// abstract methods when we click on this menu item
+        public abstract void BackToLastMenu();
+
 
         public string Name
         {
             get { return r_NameItem; }
         }
+
+
 
         //public MenuItem GoToParentItem
         //{

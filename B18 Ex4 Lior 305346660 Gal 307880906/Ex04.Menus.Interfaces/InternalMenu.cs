@@ -14,11 +14,14 @@ namespace Ex04.Menus.Interfaces
         {
         }
 
-        public override void X()
+        public override void SpecificChoice()
         {
 
         }
-        
+        public override void BackToLastMenu()
+        {
+            
+        }
         public List<MenuItem> InsideOptionsList
         {
             get { return r_InsideOptionsList; }
