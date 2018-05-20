@@ -26,13 +26,6 @@ namespace Ex04.Menus.Interfaces
         private void activeTheMethod()
         {
             r_ChosenOption.ExecutActionMethod();
-            //int userInputAsInt = GetAnInputFromUser();
-            //while(userInputAsInt != 0 )
-            //{
-            //    Console.Beep();
-            //    Console.WriteLine(Constants.k_WorngInputMessage);
-            //    userInputAsInt = GetAnInputFromUser();
-            //}
             Console.Clear();
             BackToLastMenu();
 
