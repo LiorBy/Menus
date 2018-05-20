@@ -4,9 +4,8 @@ using System.Text;
 
 namespace Ex04.Menus.Delegates
 {
-    class PrintMenuWindow
+    public class PrintMenuWindow
     {
-
         public void DisplayCurrentMenuWindow(string i_HeadLineOfTheWindow, List<MenuItem> i_InsideWindowOptionsList)
         {
             Console.WriteLine(Constants.k_OneLine);
@@ -43,7 +42,6 @@ namespace Ex04.Menus.Delegates
             printBackLineForHeadLine(i_HeadLineName.Length);
             Console.SetCursorPosition(Constants.k_RightWindowEdgeNumber, counterLine + 2);
             Console.WriteLine(Constants.k_WindowBoarder);
-
         }
 
         private void printBackLineForHeadLine(int i_NumberOfCharsInTheHeadLine)
@@ -52,6 +50,7 @@ namespace Ex04.Menus.Delegates
             {
                 Console.Write(Constants.k_BackLineChar);
             }
+
             Console.WriteLine();
         }
     }

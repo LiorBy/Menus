@@ -19,7 +19,7 @@ namespace Ex04.Menus.Test
             Console.Clear();
             Console.SetCursorPosition(Constants.k_DisplayTimeColumn, Constants.k_DisplayTimeLine);
             Console.WriteLine("The Time Is : ");
-            Console.SetCursorPosition(Constants.k_DisplayTimeColumn, Constants.k_DisplayTimeLine + 3);
+            Console.SetCursorPosition(Constants.k_DisplayTimeColumn, Constants.k_DisplayTimeLine + 2);
             Console.WriteLine("Press any key to end display");
             while (!endLoopDisplay)
             {

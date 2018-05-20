@@ -4,8 +4,6 @@ using System.Text;
 
 namespace Ex04.Menus.Delegates
 {
-    //public delegate void ChoiceNotifyDelegate(MenuItem i_MenuItem);
-
     public class MenuItem
     {
         private readonly string r_NameItem;
@@ -17,8 +15,13 @@ namespace Ex04.Menus.Delegates
             m_ParentItem = i_ParentItem;
         }
 
-        public virtual void SpecificChoice() { }
-        public virtual void BackToLastMenu() { }
+        public virtual void SpecificChoice()
+        {
+        }
+
+        public virtual void BackToLastMenu()
+        {
+        }
 
         public string Name
         {
@@ -46,6 +49,5 @@ namespace Ex04.Menus.Delegates
 
             return userInputAsInt;
         }
-
     }
 }

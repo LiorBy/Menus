@@ -27,11 +27,9 @@ namespace Ex04.Menus.Delegates
 
         private void activeTheMethod()
         {
-            
             Console.Clear();
             onChoice();
             BackToLastMenu();
-
         }
 
         private void onChoice()
@@ -41,11 +39,6 @@ namespace Ex04.Menus.Delegates
             {
                 Choice.Invoke();
             }
-
         }
-
-
-
-
     }
 }

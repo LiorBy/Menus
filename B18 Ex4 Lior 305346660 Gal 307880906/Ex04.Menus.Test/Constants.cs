@@ -17,6 +17,5 @@ namespace Ex04.Menus.Test
         public const string k_ShowVersion = "Show Version";
         public const string k_InterfaceHeadLine = "INTERFACE MAIN MENU";
         public const string k_DelegatesHeadLine = "DELEGATES MAIN MENU";
-
     }
 }
