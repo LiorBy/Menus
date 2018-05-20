@@ -15,10 +15,23 @@ namespace Ex04.Menus.Test
         private void showCurrentTime()
         {
             char endDisplay;
+            bool endLoopDisplay = false;
+            Console.Clear();
+            Console.SetCursorPosition(Constants.k_DisplayTimeLine, Constants.k_DisplayTimeColumn);
             Console.WriteLine("The Time Is : ");
-            Console.WriteLine(DateTime.Now.ToString("HH:mm:ss"));
+            Console.SetCursorPosition(Constants.k_DisplayTimeLine + 3, Constants.k_DisplayTimeColumn);
             Console.WriteLine("Press any key to end display");
-            endDisplay = Console.ReadKey().KeyChar;
+            while (!endLoopDisplay)
+            {
+                while (Console.KeyAvailable)
+                {
+                    endDisplay = Console.ReadKey().KeyChar;
+                    endLoopDisplay = true;
+                }
+                Console.SetCursorPosition(Constants.k_DisplayTimeLine + 1, Constants.k_DisplayTimeColumn);
+                Console.WriteLine(DateTime.Now.ToString("HH:mm:ss"));
+            }
+            
             Console.Clear();
         }
     }
