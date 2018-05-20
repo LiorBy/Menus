@@ -31,7 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="CapitalLettersCounter.cs" />
+    <Compile Include="DateDisplayer.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ShowVersion.cs" />
+    <Compile Include="TimeDisplayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ex04.Menus.Delegates\Ex04.Menus.Delegates.csproj">
@@ -42,6 +46,9 @@
       <Project>{558e113f-04c4-439f-bcf1-acedd79bdae1}</Project>
       <Name>Ex04.Menus.Interfaces</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
