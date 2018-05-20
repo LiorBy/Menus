@@ -14,9 +14,9 @@ namespace Ex04.Menus.Test
         public const string k_ShowDateTitle = "Show Date";
         public const string k_ShowTimeTitle = "Show Time";
         public const string k_VersionAndCapitalsTitle = "Version And Capitals";
-        public const string k_CountCapitalsTitle = "Show Date";
-        public const string k_ShowDateDisplay = "Show Date";
-
+        public const string k_CountCapitalsTitle = "Count Capitals";
+        public const string k_ShowVersion = "Show Version";
+        public const string k_InterfaceHeadLine = "INTERFACE MAIN MENU";
 
     }
 }

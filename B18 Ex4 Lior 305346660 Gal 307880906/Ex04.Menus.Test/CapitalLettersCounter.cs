@@ -14,10 +14,11 @@ namespace Ex04.Menus.Test
 
         private void countCapitalLetterInSentence()
         {
+            Console.Clear();
             char endDisplay;
             string userSenteneInput;
             int capitalLettersCounter = 0;
-            Console.WriteLine("Please enter a sentencr : ");
+            Console.WriteLine("Please enter a sentence : ");
             userSenteneInput = Console.ReadLine();
             for (int i = 0; i < userSenteneInput.Length; i++)
             {

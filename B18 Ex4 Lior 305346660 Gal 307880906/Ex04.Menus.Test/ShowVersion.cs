@@ -5,23 +5,21 @@ using Ex04.Menus.Interfaces;
 
 namespace Ex04.Menus.Test
 {
-    class ShowVersion
+    public class ShowVersion : IAbilityToOperate
     {
-        class CapitalLettersCounter : IAbilityToOperate
+        public void ExecutActionMethod()
         {
-            public void ExecutActionMethod()
-            {
-                showVersion();
-            }
+            showVersion();
+        }
 
-            private void showVersion()
-            {
-                char endDisplay;
-                Console.WriteLine("Version: 18.2.4.0");
-                Console.Clear();
-                Console.WriteLine("Press any key to end display...");
-                endDisplay = Console.ReadKey().KeyChar;
-            }
+        private void showVersion()
+        {
+            Console.Clear();
+            char endDisplay;
+            Console.WriteLine("Version: 18.2.4.0");
+            Console.WriteLine("Press any key to end display...");
+            endDisplay = Console.ReadKey().KeyChar;
+            Console.Clear();
         }
     }
 }

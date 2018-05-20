@@ -37,7 +37,11 @@ namespace Ex04.Menus.Interfaces
         {
             char userInput = Console.ReadKey().KeyChar;
             int userInputAsInt;
-            int.TryParse(char.ToString(userInput), out userInputAsInt);
+            if( !int.TryParse(char.ToString(userInput), out userInputAsInt))
+            {
+                userInputAsInt = -1;
+            }
+
             return userInputAsInt;
         }
 

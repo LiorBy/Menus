@@ -17,9 +17,9 @@ namespace Ex04.Menus.Test
             char endDisplay;
             bool endLoopDisplay = false;
             Console.Clear();
-            Console.SetCursorPosition(Constants.k_DisplayTimeLine, Constants.k_DisplayTimeColumn);
+            Console.SetCursorPosition(Constants.k_DisplayTimeColumn, Constants.k_DisplayTimeLine);
             Console.WriteLine("The Time Is : ");
-            Console.SetCursorPosition(Constants.k_DisplayTimeLine + 3, Constants.k_DisplayTimeColumn);
+            Console.SetCursorPosition(Constants.k_DisplayTimeColumn, Constants.k_DisplayTimeLine + 3);
             Console.WriteLine("Press any key to end display");
             while (!endLoopDisplay)
             {
@@ -28,7 +28,7 @@ namespace Ex04.Menus.Test
                     endDisplay = Console.ReadKey().KeyChar;
                     endLoopDisplay = true;
                 }
-                Console.SetCursorPosition(Constants.k_DisplayTimeLine + 1, Constants.k_DisplayTimeColumn);
+                Console.SetCursorPosition(Constants.k_DisplayTimeColumn, Constants.k_DisplayTimeLine + 1);
                 Console.WriteLine(DateTime.Now.ToString("HH:mm:ss"));
             }
             

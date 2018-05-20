@@ -52,11 +52,15 @@ namespace Ex04.Menus.Interfaces
         private int verifyUserInput()
         {
             int userChoise = GetAnInputFromUser();
-            while (userChoise < 0 || userChoise > r_InsideOptionsList.Capacity)
+            while (!(userChoise >= 0 && userChoise <= r_InsideOptionsList.Capacity))
             {
+                Console.SetCursorPosition(0, 8);
                 Console.Beep();
                 Console.Write(Constants.k_WorngInputMessage);
                 userChoise = GetAnInputFromUser();
+                Console.SetCursorPosition(0, 8);
+                Console.Write("                                                     ");
+                
             }
 
             return userChoise;

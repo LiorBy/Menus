@@ -10,7 +10,9 @@ namespace Ex04.Menus.Test
     {
         public static void Main()
         {
-
+            Console.CursorVisible = false;
+            InterfaceDemonstration test1 = new InterfaceDemonstration();
+            test1.StartDemonstration();
             
 
         }
