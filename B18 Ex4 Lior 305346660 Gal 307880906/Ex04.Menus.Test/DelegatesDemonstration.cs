@@ -11,11 +11,11 @@ namespace Ex04.Menus.Test
 
         public void StartDemonstration()
         {
-            createInterfaceMenu(m_MainMenu);
+            createDelegatesMenu(m_MainMenu);
             m_MainMenu.Show();
         }
 
-        private void createInterfaceMenu(MainMenu i_MainMenu)
+        private void createDelegatesMenu(MainMenu i_MainMenu)
         {
             InternalMenu dateAndTimeMenu = new InternalMenu(Constants.k_DateAndTimeTitle, i_MainMenu);
             InternalMenu versionAndCapitalMenu = new InternalMenu(Constants.k_VersionAndCapitalsTitle, i_MainMenu);
