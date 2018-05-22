@@ -52,15 +52,38 @@ namespace Ex04.Menus.Delegates
 
         private int verifyUserInput()
         {
-            int userChoice = GetAnInputFromUser();
-            while (!(userChoice >= 0 && userChoice <= r_InsideOptionsList.Capacity))
+            int userChoice = Constants.k_EmptyInput;
+            bool inputIsCorrect = false;
+            while (!inputIsCorrect)
             {
-                Console.SetCursorPosition(0, 8);
-                Console.Beep();
-                Console.Write(Constants.k_WorngInputMessage);
-                userChoice = GetAnInputFromUser();
-                Console.SetCursorPosition(0, 8);
-                Console.Write("                                                     ");
+                try
+                {
+                    userChoice = GetAnInputFromUser();
+                    if (!(userChoice >= 0 && userChoice <= r_InsideOptionsList.Count))
+                    {
+                        throw new ArgumentOutOfRangeException();
+                    }
+                    else
+                    {
+                        inputIsCorrect = true;
+                    }
+                }
+                catch (ArgumentOutOfRangeException rangeException)
+                {
+                    Console.Beep();
+                    Console.SetCursorPosition(0, 8);
+                    Console.WriteLine("                                                                     ");
+                    Console.SetCursorPosition(0, 8);
+                    Console.Write(rangeException.Message);
+                }
+                catch (FormatException onlyNumbersException)
+                {
+                    Console.Beep();
+                    Console.SetCursorPosition(0, 8);
+                    Console.WriteLine("                                                                     ");
+                    Console.SetCursorPosition(0, 8);
+                    Console.Write(onlyNumbersException.Message);
+                }         
             }
 
             return userChoice;

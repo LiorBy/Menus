@@ -42,9 +42,9 @@ namespace Ex04.Menus.Interfaces
         {
             char userInput = Console.ReadKey().KeyChar;
             int userInputAsInt;
-            if(!int.TryParse(char.ToString(userInput), out userInputAsInt))
+            if (!int.TryParse(char.ToString(userInput), out userInputAsInt))
             {
-                userInputAsInt = -1;
+                throw new FormatException(Constants.k_WorngFormatInputMessage);
             }
 
             return userInputAsInt;
