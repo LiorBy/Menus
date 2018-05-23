@@ -13,7 +13,5 @@ namespace Ex04.Menus.Test
         {
             r_CallMethod.countCapitalLetterInSentence();
         }
-
-        
     }
 }

@@ -73,7 +73,5 @@ namespace Ex04.Menus.Test
 
             Console.Clear();
         }
-
-
     }
 }

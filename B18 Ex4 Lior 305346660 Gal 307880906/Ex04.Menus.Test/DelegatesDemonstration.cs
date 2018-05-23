@@ -7,8 +7,8 @@ namespace Ex04.Menus.Test
 {
     public class DelegatesDemonstration
     {
-        private MainMenu m_MainMenu = new MainMenu(Constants.k_DelegatesHeadLine);
         private readonly SystemMethods r_CallMethod = new SystemMethods();
+        private MainMenu m_MainMenu = new MainMenu(Constants.k_DelegatesHeadLine);
 
         public void StartDemonstration()
         {
@@ -35,7 +35,6 @@ namespace Ex04.Menus.Test
             version.Choice += r_CallMethod.showVersion; ////add pointer to the fuction to the event
             versionAndCapitalMenu.InsideOptionsList.Add(countCapitals);
             versionAndCapitalMenu.InsideOptionsList.Add(version);         
-        }
-        
+        }        
     }
 }
