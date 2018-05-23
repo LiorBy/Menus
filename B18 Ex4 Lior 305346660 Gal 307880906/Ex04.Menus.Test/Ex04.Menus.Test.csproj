@@ -39,6 +39,7 @@
     <Compile Include="InterfaceDemonstration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ShowVersion.cs" />
+    <Compile Include="SystemMethods.cs" />
     <Compile Include="TimeDisplayer.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -7,20 +7,12 @@ namespace Ex04.Menus.Test
 {
     public class DateDisplayer : IAbilityToOperate
     {
+        private readonly SystemMethods r_CallMethod = new SystemMethods();
+
         public void ExecutActionMethod()
         {
-            showTodayDate();
+            r_CallMethod.showTodayDate();
         }
 
-        private void showTodayDate()
-        {
-            Console.Clear();
-            char endDisplay;
-            Console.WriteLine("The Date Is: ");
-            Console.WriteLine(DateTime.Now.ToShortDateString());
-            Console.WriteLine("Press any key to end display...");
-            endDisplay = Console.ReadKey().KeyChar;
-            Console.Clear();
-        }
     }
 }

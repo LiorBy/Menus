@@ -7,19 +7,12 @@ namespace Ex04.Menus.Test
 {
     public class ShowVersion : IAbilityToOperate
     {
+        private readonly SystemMethods r_CallMethod = new SystemMethods();
+
         public void ExecutActionMethod()
         {
-            showVersion();
+            r_CallMethod.showVersion();
         }
 
-        private void showVersion()
-        {
-            Console.Clear();
-            char endDisplay;
-            Console.WriteLine("Version: 18.2.4.0");
-            Console.WriteLine("Press any key to end display...");
-            endDisplay = Console.ReadKey().KeyChar;
-            Console.Clear();
-        }
     }
 }
